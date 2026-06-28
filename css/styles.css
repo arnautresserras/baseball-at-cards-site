@@ -189,6 +189,7 @@ section { padding: 56px 0; }
 /* ---------- Screenshots ---------- */
 .shots {
   display: flex;
+  justify-content: center;
   gap: 18px;
   overflow-x: auto;
   padding: 8px 4px 18px;
