@@ -93,22 +93,23 @@ sync when editing wording.
 
 ## Outstanding work before launch
 
-- [ ] Replace the four screenshot placeholders on `index.html` with real
-      captures.
+- [x] Replace the four screenshot placeholders on `index.html` with real
+      captures (home, boss intro, in-game, settings; downscaled to 720px wide).
 - [ ] Add an App Store download badge/link once the app is live.
 - [ ] (Optional) Custom domain via a `CNAME` file + DNS, then enable "Enforce
       HTTPS" in Settings → Pages.
-- [ ] Draft the App Store Connect privacy "nutrition label" answers (must match
+- [x] Draft the App Store Connect privacy "nutrition label" answers (must match
       `privacy.html`): declare *Purchases* (linked, app functionality) and
       *Usage Data / Product Interaction* + *Identifiers* (Mixpanel anonymous ID,
       analytics).
 
 ## Publishing
 
-This repo is not yet initialized as git. See `README.md` for the exact
-`git init` / `gh repo create` / GitHub Pages steps. In short: push to a public
-`baseball-at-cards-site` repo, then Settings → Pages → Deploy from branch →
-`main` / root.
+This repo is published and live. It is a public GitHub repo
+(`arnautresserras/baseball-at-cards-site`) deploying from the `master` branch /
+root via GitHub Pages; both submission URLs return 200. See `README.md` for the
+publish history and submission URLs. To deploy changes, just commit and push to
+`master` — Pages rebuilds automatically.
 
 ## Background
 

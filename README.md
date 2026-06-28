@@ -18,24 +18,32 @@ hosted for free on GitHub Pages.
 
 ## Publishing to GitHub Pages
 
-From inside this folder:
+This site is **already published and live**. It's a public repo
+(`arnautresserras/baseball-at-cards-site`) deploying from the `master` branch /
+root via GitHub Pages, with both submission URLs returning 200.
+
+**To deploy a change:** commit and push to `master` — Pages rebuilds
+automatically and the change is live in ~1 minute.
 
 ```bash
-git init -b main
+git add .
+git commit -m "…"
+git push
+```
+
+<details>
+<summary>Original one-time setup (for reference)</summary>
+
+```bash
+git init
 git add .
 git commit -m "Initial site: home, privacy, support"
 gh repo create baseball-at-cards-site --public --source=. --remote=origin --push
 ```
 
-(Or create an empty `baseball-at-cards-site` repo on github.com and
-`git remote add origin …` + `git push -u origin main`.)
-
-Then enable Pages:
-
-1. On GitHub: **Settings → Pages**.
-2. **Source:** Deploy from a branch.
-3. **Branch:** `main`, folder `/ (root)`. Save.
-4. Wait ~1 minute. The site goes live at the URL above.
+Then on GitHub: **Settings → Pages → Source:** Deploy from a branch →
+**Branch:** `master`, folder `/ (root)`.
+</details>
 
 ## App Store submission URLs
 
@@ -47,7 +55,7 @@ Paste these into App Store Connect:
 
 ## Still to do before launch
 
-- [ ] Replace the screenshot placeholders on the home page with real captures.
+- [x] Replace the screenshot placeholders on the home page with real captures.
 - [ ] Add the App Store download badge/link once the app is live.
 - [ ] (Optional) Point a custom domain via a `CNAME` file + DNS, then enable
       "Enforce HTTPS" in Settings → Pages.
