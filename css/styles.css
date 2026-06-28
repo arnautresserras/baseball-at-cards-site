@@ -199,16 +199,10 @@ section { padding: 56px 0; }
   width: 220px;
   aspect-ratio: 9 / 19.5;
   border-radius: 22px;
-  background: repeating-linear-gradient(45deg, var(--navy-mid), var(--navy-mid) 12px, var(--navy-light) 12px, var(--navy-light) 24px);
+  background: var(--navy-mid);
   border: 2px solid var(--navy-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--gray);
-  font-family: "Press Start 2P", monospace;
-  font-size: 10px;
-  line-height: 1.8;
+  object-fit: cover;
+  display: block;
   scroll-snap-align: center;
 }
 
