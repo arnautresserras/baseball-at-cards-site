@@ -189,7 +189,8 @@ section { padding: 56px 0; }
 /* ---------- Screenshots ---------- */
 .shots {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  justify-content: safe center;
   gap: 18px;
   overflow-x: auto;
   padding: 8px 4px 18px;
@@ -204,8 +205,10 @@ section { padding: 56px 0; }
   border: 2px solid var(--navy-light);
   object-fit: cover;
   display: block;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
+.shot:first-child { scroll-snap-align: start; margin-inline-start: auto; }
+.shot:last-child { margin-inline-end: auto; }
 
 /* ---------- Article (privacy / support) ---------- */
 .article {
