@@ -1,61 +1,57 @@
 # Baseball at Cards — Website
 
-The public marketing and legal site for the **Baseball at Cards** iOS game,
-hosted for free on GitHub Pages.
+This is the source for the official website of **Baseball at Cards**, a
+single-player baseball roguelike card game for iPhone and iPad.
 
-**Live URL (once published):** https://arnautresserras.github.io/baseball-at-cards-site/
+🌐 **Website:** https://arnautresserras.github.io/baseball-at-cards-site/
+📲 **Download on the App Store:** https://apps.apple.com/es/app/id6779787824
 
-## Contents
+## About the game
 
-| File | Page |
+Baseball at Cards is a single-player baseball roguelike where **every pitch is a
+card**. Map your route through a branching run, draft a lineup from a roster of
+player archetypes, and swing for the fences. Defeat every boss — each one bends
+the rules in its own way — recruit new players, and see how far a single run can
+go. No two runs are alike.
+
+- **Free to download**, with a free Sample Game you can play anytime.
+- Unlock unlimited **Survival Runs** with a **single one-time purchase** — no
+  subscriptions, no ads.
+- iOS only (iPhone + iPad) at launch.
+
+## Pages on this site
+
+| Page | What it's for |
 |---|---|
-| `index.html` | Home / promo page |
-| `privacy.html` | Privacy Policy (required for App Store submission) |
-| `support.html` | Support & FAQ (required for App Store submission) |
-| `css/styles.css` | Shared styles (mirrors the game's theme) |
-| `assets/` | App icon + favicon |
-| `.nojekyll` | Tells GitHub Pages to serve files as-is (no Jekyll build) |
+| [Home](https://arnautresserras.github.io/baseball-at-cards-site/) | What the game is and how it plays |
+| [Support & FAQ](https://arnautresserras.github.io/baseball-at-cards-site/support.html) | Help with purchases, restoring, refunds, and reporting bugs |
+| [Privacy Policy](https://arnautresserras.github.io/baseball-at-cards-site/privacy.html) | What data the app and this site collect |
+| [Credits](https://arnautresserras.github.io/baseball-at-cards-site/credits.html) | Who made it, and a note on AI-assisted art/audio |
 
-## Publishing to GitHub Pages
+## Need help?
 
-This site is **already published and live**. It's a public repo
-(`arnautresserras/baseball-at-cards-site`) deploying from the `master` branch /
-root via GitHub Pages, with both submission URLs returning 200.
+For anything about the game or a purchase, check the
+[Support page](https://arnautresserras.github.io/baseball-at-cards-site/support.html)
+or email **arnautresserras@gmail.com**. Baseball at Cards is made by a solo
+developer, so thanks in advance for your patience.
 
-**To deploy a change:** commit and push to `master` — Pages rebuilds
-automatically and the change is live in ~1 minute.
+## About this repository
 
-```bash
-git add .
-git commit -m "…"
-git push
-```
+This is a small, zero-cost **static website** — plain HTML and CSS, no framework
+and no build step — hosted on GitHub Pages. The only external dependencies are
+Google Fonts and a privacy-first, cookieless analytics script (no cookies, no
+personal data; see the Privacy Policy for details).
 
-<details>
-<summary>Original one-time setup (for reference)</summary>
+If you'd like to run it locally after cloning:
 
 ```bash
-git init
-git add .
-git commit -m "Initial site: home, privacy, support"
-gh repo create baseball-at-cards-site --public --source=. --remote=origin --push
+python -m http.server 8000
+# then open http://localhost:8000
 ```
 
-Then on GitHub: **Settings → Pages → Source:** Deploy from a branch →
-**Branch:** `master`, folder `/ (root)`.
-</details>
+The game itself is developed in a separate repository and is not part of this
+site.
 
-## App Store submission URLs
+---
 
-Paste these into App Store Connect:
-
-- **Privacy Policy URL:** `https://arnautresserras.github.io/baseball-at-cards-site/privacy.html`
-- **Support URL:** `https://arnautresserras.github.io/baseball-at-cards-site/support.html`
-- **Marketing URL (optional):** `https://arnautresserras.github.io/baseball-at-cards-site/`
-
-## Still to do before launch
-
-- [x] Replace the screenshot placeholders on the home page with real captures.
-- [ ] Add the App Store download badge/link once the app is live.
-- [ ] (Optional) Point a custom domain via a `CNAME` file + DNS, then enable
-      "Enforce HTTPS" in Settings → Pages.
+© 2026 Arnau Tresserras. Made by a solo, independent developer.
