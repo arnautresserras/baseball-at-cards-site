@@ -40,7 +40,7 @@ body {
   margin: 0;
   background: var(--navy);
   color: var(--cream);
-  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Nunito", "Noto Sans JP", "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   font-size: 18px;
   line-height: 1.65;
   overflow-x: hidden;
@@ -85,14 +85,14 @@ a:hover { color: var(--gold-pale); }
 }
 .nav-brand img { width: 34px; height: 34px; border-radius: 8px; }
 .nav-brand span {
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 17px;
   letter-spacing: 0.3px;
 }
 .nav-links {
   display: flex;
   gap: 20px;
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -176,7 +176,7 @@ a:hover { color: var(--gold-pale); }
   padding: 8px 12px;
   background: var(--ruby);
   color: var(--cream);
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 11px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -201,7 +201,7 @@ a:hover { color: var(--gold-pale); }
 }
 .tc-name { text-align: center; padding: 2px 12px 10px; }
 .tc-name h1 {
-  font-family: "Bowlby One", "Bungee", sans-serif;
+  font-family: "Bowlby One", "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: clamp(20px, 3.4vw, 26px);
   line-height: 1.04;
@@ -212,7 +212,7 @@ a:hover { color: var(--gold-pale); }
 .tc-name .sub {
   display: block;
   margin-top: 6px;
-  font-family: "Press Start 2P", monospace;
+  font-family: "Press Start 2P", "Noto Sans JP", "Noto Sans KR", monospace;
   font-size: 8px;
   letter-spacing: 0.5px;
   color: var(--gray-light);
@@ -233,12 +233,12 @@ a:hover { color: var(--gold-pale); }
 .tc-stats div:last-child { border-right: none; }
 .tc-stats b {
   display: block;
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 16px;
   color: var(--gold);
 }
 .tc-stats span {
-  font-family: "Press Start 2P", monospace;
+  font-family: "Press Start 2P", "Noto Sans JP", "Noto Sans KR", monospace;
   font-size: 7px;
   letter-spacing: 0.5px;
   color: var(--gray-light);
@@ -246,14 +246,14 @@ a:hover { color: var(--gold-pale); }
 
 .hero-eyebrow {
   display: inline-block;
-  font-family: "Press Start 2P", monospace;
+  font-family: "Press Start 2P", "Noto Sans JP", "Noto Sans KR", monospace;
   font-size: 10px;
   letter-spacing: 1px;
   color: var(--gold);
   margin: 0 0 18px;
 }
 .hero-lead {
-  font-family: "Bowlby One", "Bungee", sans-serif;
+  font-family: "Bowlby One", "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: clamp(30px, 5vw, 46px);
   line-height: 1.06;
@@ -279,7 +279,7 @@ a:hover { color: var(--gold-pale); }
 /* ---------- Buttons / badges ---------- */
 .btn {
   display: inline-block;
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -332,12 +332,12 @@ a:hover { color: var(--gold-pale); }
   text-align: left;
 }
 .btn-appstore-text small {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 11px;
   font-weight: 600;
 }
 .btn-appstore-text strong {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.2px;
@@ -348,14 +348,14 @@ section { padding: 56px 0; }
 .section-kicker {
   display: block;
   text-align: center;
-  font-family: "Press Start 2P", monospace;
+  font-family: "Press Start 2P", "Noto Sans JP", "Noto Sans KR", monospace;
   font-size: 10px;
   letter-spacing: 1px;
   color: var(--gold);
   margin: 0 0 14px;
 }
 .section-title {
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: clamp(24px, 5vw, 34px);
   text-align: center;
   margin: 0 0 8px;
@@ -387,7 +387,7 @@ section { padding: 56px 0; }
   position: absolute;
   right: 24px;
   bottom: 8px;
-  font-family: "Press Start 2P", monospace;
+  font-family: "Press Start 2P", "Noto Sans JP", "Noto Sans KR", monospace;
   font-size: clamp(40px, 12vw, 96px);
   color: rgba(255, 255, 255, 0.06);
   letter-spacing: 2px;
@@ -436,7 +436,7 @@ section { padding: 56px 0; }
   background: var(--cream);
   color: var(--ruby);
   border: 2px solid var(--ruby);
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 1;
@@ -458,7 +458,7 @@ section { padding: 56px 0; }
 
 .feature .emoji { font-size: 30px; line-height: 1; }
 .feature h3 {
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 17px;
   margin: 12px 0 8px;
   color: var(--chalk-ink);
@@ -504,7 +504,7 @@ section { padding: 56px 0; }
 }
 .article .container { max-width: 760px; }
 .article h1 {
-  font-family: "Bowlby One", sans-serif;
+  font-family: "Bowlby One", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: clamp(30px, 6vw, 44px);
   color: var(--cream);
@@ -516,14 +516,14 @@ section { padding: 56px 0; }
   margin-bottom: 32px;
 }
 .article h2 {
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 22px;
   color: var(--gold);
   margin: 40px 0 12px;
   padding-top: 8px;
 }
 .article h3 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-weight: 800;
   font-size: 19px;
   color: var(--gold-pale);
@@ -559,7 +559,7 @@ th, td {
   text-align: left;
   vertical-align: top;
 }
-th { background: var(--navy-mid); color: var(--gold-pale); font-family: "Bungee", sans-serif; font-size: 13px; }
+th { background: var(--navy-mid); color: var(--gold-pale); font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif; font-size: 13px; }
 td { color: var(--parchment); }
 
 /* callout */
@@ -584,7 +584,7 @@ td { color: var(--parchment); }
   flex-wrap: wrap;
   gap: 18px;
   justify-content: center;
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -598,4 +598,78 @@ td { color: var(--parchment); }
   .nav-links { gap: 14px; font-size: 11px; }
   .nav-brand span { font-size: 15px; }
   section { padding: 44px 0; }
+}
+
+/* ---------- Language switcher ---------- */
+/* Rendered by js/i18n.js, so it only ever appears when switching actually works. */
+.nav { flex-wrap: wrap; }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--navy-light);
+  border-radius: 999px;
+  background: rgba(13, 27, 46, 0.6);
+}
+.lang-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: var(--gray-light);
+  font-family: "Bungee", "Noto Sans JP", "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  padding: 6px 9px;
+  border-radius: 999px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.lang-btn:hover { color: var(--gold); }
+.lang-btn.active { color: var(--dark); background: var(--gold); }
+.lang-btn:focus-visible { outline: 2px solid var(--gold-pale); outline-offset: 2px; }
+
+/* ---------- CJK typography ---------- */
+/* Uppercasing and wide letter-spacing carry no meaning on Japanese and Korean
+   text and only cost legibility, so drop them when those locales are active. */
+html[data-lang="ja"] .nav-links,
+html[data-lang="ko"] .nav-links,
+html[data-lang="ja"] .footer-links,
+html[data-lang="ko"] .footer-links,
+html[data-lang="ja"] .section-kicker,
+html[data-lang="ko"] .section-kicker,
+html[data-lang="ja"] .hero-eyebrow,
+html[data-lang="ko"] .hero-eyebrow,
+html[data-lang="ja"] .tc-name .sub,
+html[data-lang="ko"] .tc-name .sub,
+html[data-lang="ja"] .tc-stats span,
+html[data-lang="ko"] .tc-stats span {
+  text-transform: none;
+  letter-spacing: 0;
+}
+/* Press Start 2P has no CJK glyphs at all, so the fallback face needs room. */
+html[data-lang="ja"] .section-kicker,
+html[data-lang="ko"] .section-kicker,
+html[data-lang="ja"] .hero-eyebrow,
+html[data-lang="ko"] .hero-eyebrow {
+  font-size: 12px;
+  line-height: 1.6;
+}
+/* CJK has no spaces to break on: keep long strings inside their containers. */
+html[data-lang="ja"] body,
+html[data-lang="ko"] body {
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .nav-right { gap: 10px; }
+  .lang-btn { font-size: 10px; padding: 5px 7px; }
 }

@@ -4,7 +4,7 @@ This is the source for the official website of **Baseball at Cards**, a
 single-player baseball roguelike card game for iPhone and iPad.
 
 🌐 **Website:** https://arnautresserras.github.io/baseball-at-cards-site/
-📲 **Download on the App Store:** https://apps.apple.com/es/app/id6779787824
+📲 **Download on the App Store:** https://apps.apple.com/us/app/id6779787824
 
 ## About the game
 
@@ -27,6 +27,18 @@ go. No two runs are alike.
 | [Support & FAQ](https://arnautresserras.github.io/baseball-at-cards-site/support.html) | Help with purchases, restoring, refunds, and reporting bugs |
 | [Privacy Policy](https://arnautresserras.github.io/baseball-at-cards-site/privacy.html) | What data the app and this site collect |
 | [Credits](https://arnautresserras.github.io/baseball-at-cards-site/credits.html) | Who made it, and a note on AI-assisted art/audio |
+
+## Languages
+
+The site is available in **English, Español (México), 日本語, and 한국어**. It
+picks your browser's language automatically, and you can switch any time with
+the language buttons in the header. To link straight to one, add `?lang=` to any
+page — for example
+[?lang=ja](https://arnautresserras.github.io/baseball-at-cards-site/?lang=ja) or
+[?lang=ko](https://arnautresserras.github.io/baseball-at-cards-site/?lang=ko).
+
+The Privacy Policy is published in all four, with the English version as the
+authoritative one.
 
 ## Need help?
 
