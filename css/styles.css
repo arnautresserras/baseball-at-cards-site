@@ -498,6 +498,38 @@ section { padding: 56px 0; }
 .shot:first-child { scroll-snap-align: start; margin-inline-start: auto; }
 .shot:last-child { margin-inline-end: auto; }
 
+/* --- What's New band (v1.1): the run log, the board, sharing, achievements.
+   Deliberately NOT a base-path zig-zag — that list is the evergreen "how it
+   plays" pitch and stays at six. This is a dated band that can be retired or
+   re-pointed at the next release without touching it. --- */
+.newband {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-top: 2px solid var(--gold-dk);
+}
+.newband .section-title { color: var(--cream); }
+.newband .section-sub { color: rgba(255, 255, 255, 0.78); }
+.newgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+.newcard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(245, 197, 24, 0.28);
+  border-radius: 14px;
+  padding: 22px 20px;
+  text-align: left;
+}
+.newcard .emoji { font-size: 28px; line-height: 1; margin-bottom: 10px; }
+.newcard h3 {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+.newcard p { margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.8); }
+
 /* ---------- Article (privacy / support) ---------- */
 .article {
   padding: 48px 0 64px;
