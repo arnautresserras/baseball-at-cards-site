@@ -1,0 +1,36 @@
+[
+ {
+  "date": "2026-10-27",
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Narrative Workflow",
+  "theme": "brand",
+  "genre": "playful",
+  "axes": "dark/display-heavy/warm",
+  "hero": "Counter",
+  "nav": "slab",
+  "footer": "mast",
+  "imagery": "the product: real in-game screenshots",
+  "photos": [],
+  "entry": "the product screen (at-bat) beside the head",
+  "fingerprint": "Numbered by structure|Two-column asymmetric|Bleed-colour block|Solid|Tightly cropped to the grid|None",
+  "sections": [
+   "Hero (at-bat screen)",
+   "Stage 1 Chart your season (map + node rows)",
+   "Stage 2 Draft All-Stars (pack + archetypes 2x2)",
+   "Stage 3 Every one cheats (boss)",
+   "Daily Run band (3 rows: Daily Run, Run Rules, Game Center)",
+   "Close (trading card + walk-off + badge)",
+   "Footer (mast)"
+  ],
+  "signature": "the trading card as the offer, its stat line the price",
+  "waived": [
+   "37",
+   "44c",
+   "79"
+  ],
+  "draw": "7a5624",
+  "prompt": "Redesign the Baseball at Cards home page around the five new App Store screenshots, keeping content and wiring"
+ }
+]

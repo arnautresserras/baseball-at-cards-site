@@ -68,14 +68,18 @@ Plain static HTML/CSS. **No framework, no build step, no package manager.**
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home / promo page (trading-card hero, "how it plays" base path, real screenshots, App Store download button) |
+| `index.html` | Home / promo page: at-bat hero, three-stage run, Daily Run band, trading-card close, App Store badge (twice) |
 | `privacy.html` | Privacy Policy — App Store blocker; must mirror real data practices (app §2.2–2.5 + website analytics §2.6) |
 | `support.html` | Support & FAQ — App Store blocker; purchases, restore, refunds, bugs |
 | `credits.html` | Credits — solo dev + AI-generated art/audio note (linked in footer only; not in the header nav) |
-| `css/styles.css` | Single shared stylesheet for every page |
+| `css/styles.css` | Shared stylesheet for every page. The `/* Hallmark · … */` comments at the top are the stamp (design record + waivers), then it `@import`s the two files below |
+| `css/tokens.css` | Every colour and font as a variable (game palette, `--font-*` stacks with Noto CJK fallbacks) plus the type, spacing and container scale |
+| `css/base.css` | Hallmark base rules: reset, `overflow-x: clip`, `:focus-visible`, reduced motion, `.container` |
 | `js/i18n.js` | Build-free runtime translation. Holds the `TRANSLATIONS` table (es-MX / ja / ko) **inline at the top**, then detects the visitor's language, swaps `data-i18n` nodes, and renders the header language switcher |
 | `assets/icon.png`, `assets/favicon.png` | Copied from the game's `assets/` |
-| `assets/screenshot_0*.png` | Real in-game captures shown in the home-page screenshot strip |
+| `assets/shot-1..5-*.png` | Full-size, caption-free in-game captures (at-bat, walk-off, boss, map, pack): the sources, not linked by any page |
+| `assets/shot-1..5-*-720.jpg` | The 720×1558 JPEG (q85) copies the home page shows; regenerate from the PNGs if a capture changes |
+| `.hallmark/` | Hallmark design-lint records. `log.json` is committed; screenshots, the before record and `compare.html` are git-ignored |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is (skip Jekyll) |
 | `README.md` | Public-facing intro to the game + site (written for players/visitors, not the owner) |
 
@@ -99,7 +103,7 @@ translation happens **at runtime in the browser**:
   JSON file is blocked under `file://`, so a fetching version silently shows
   English forever when the page is opened straight from disk instead of
   through a server. No network, no async, no silent failure. The file is
-  ~83 KB, and that is the price of it always working.
+  ~89 KB, and that is the price of it always working.
 - Every translatable node carries **`data-i18n="key"`** (swapped via
   `innerHTML`, so a value may contain inline `<strong>`/`<a>`/`<li>` markup).
   Attributes use **`data-i18n-content="key"`** (meta descriptions) and
@@ -115,11 +119,11 @@ translation happens **at runtime in the browser**:
 - The header **language switcher is rendered by JS**, so it never appears when
   switching wouldn't work. Each page also declares static `hreflang` alternates
   pointing at its `?lang=` URLs.
-- **CJK type:** Noto Sans JP/KR are appended to every font stack in
-  `styles.css` (Bowlby One, Bungee, and Press Start 2P have no CJK glyphs) and
-  the webfont is injected only when a CJK locale activates. `html[data-lang]`
-  rules drop uppercasing and letter-spacing, which are meaningless on Japanese
-  and Korean text.
+- **CJK type:** Noto Sans JP/KR are appended to every `--font-*` stack in
+  `css/tokens.css` (Bowlby One, Bungee, and Press Start 2P have no CJK glyphs)
+  and the webfont is injected only when a CJK locale activates. `html[data-lang]`
+  rules in `styles.css` enlarge the small Press Start 2P captions and table
+  heads (their CJK fallback needs room) and keep long strings from overflowing.
 - **In-app button names stay in English** in translated support copy
   (`Play Survival Run`, `Restore Purchase`), with a gloss in parentheses — the
   game's UI is not localized, so players must be able to match the words on
@@ -140,35 +144,46 @@ translation happens **at runtime in the browser**:
   (`baseball-at-cards/src/theme/index.ts`): navy `#0D1B2E` background, gold
   `#F5C518` accent, ruby `#CC2936`; fonts Bowlby One (titles), Bungee
   (headings/nav), Nunito (body), Press Start 2P (small captions). These are
-  defined as CSS variables at the top of `css/styles.css`.
-- **Design language: night-ballpark + trading cards.** The home page is
-  deliberately themed (not a generic dark-hero template) — keep new work
-  consistent with it:
-  - **Trading-card hero** (`.tradingcard` / `.tc-*`): the app presented as a
-    gold-foil "rookie card" — ruby banner, app-icon photo window, name plate
-    (holds the page's single `<h1>`), and a back-of-card stat line. It sits in
-    an asymmetric two-column hero (`.hero-grid`): pitch copy left
-    (`.hero-copy`: `.hero-eyebrow` + `.hero-lead` + `.tagline` + `.hero-cta`),
-    card right. No tilt (it made the title render as a jagged staircase) — just
-    a hover lift. On mobile the card stacks **above** the copy.
-  - **Base-path features** (`.basepath` + `.feature.feature-l/-r`): the "how it
-    plays" cards zig-zag down a dashed chalk baseline, each pinned to a rotated
-    diamond base marker (`.pos`) numbered like a batting order.
-  - **What's-New band** (`.newband` + `.newgrid`/`.newcard`): a dated
-    release-highlight strip between the base path and the screenshots,
-    currently v1.2 (Daily Run, Run Rules, Game Center, packs & All-Stars). Kept separate from the base path on purpose — that list is
-    the evergreen "how it plays" pitch and stays at six; this band can be
-    retired or re-pointed at the next release on its own. Keys are `new.*`
-    and `n1..n4.*`.
-  - **Outfield-wall section** (`.section-field`): green grass gradient, gold
-    home-run line on top, faint painted "408" distance marker. Section eyebrows
-    use `.section-kicker` (Press Start 2P, e.g. "◆ PLAY BALL ◆").
-  - **Extra ballpark palette vars** live alongside the game palette in
-    `:root`: `--grass`, `--grass-dk`, `--dirt`, `--chalk`, `--chalk-ink`,
-    `--chalk-line`.
+  defined as variables in `css/tokens.css`; no literal colour or
+  `font-family` belongs anywhere else.
+- **Design language: a run, told with the game's own screens.** The home page
+  is a Hallmark redesign (October 2026; record in the stamp at the top of
+  `css/styles.css` and in `.hallmark/log.json`). It follows a run in order and
+  leads with real captures, not illustration. Keep new work consistent with it:
+  - **Slab nav + Counter hero** (`.hero-grid`): the page's single `<h1>`
+    ("Baseball, dealt one card at a time."), one sentence and the App Store
+    badge on columns 1–5; the at-bat screen beside them, sized to the viewport
+    so the hand of cards shows on the first screen. On mobile the screen
+    stacks below the copy.
+  - **The run** (`.run > ol.stages > li.stage`): three numbered stages (map,
+    draft, boss). The screen is always on the left and the copy on the right,
+    never a zigzag. Copy comes first in the DOM so phones read the head first.
+    The number sits in the ruby diamond base marker (`.pos`) inside each `h2`.
+    The second object differs per stage on purpose, so they don't read as a
+    feature grid: Stage 1 the map's node types as rows (`dl.nodes`), Stage 2
+    the archetypes two by two (`ul.archetypes`), Stage 3 copy only. Node names
+    (Game, Boss, Shop, Event, Train) stay in English as in-game words.
+  - **Daily Run band** (`.daily`): the dated v1.2 story as three rows (Daily
+    Run, Run Rules, Game Center) beside a head, with no screenshot so screens
+    never run back to back. It can be retired or re-pointed at the next release
+    on its own. Keys are `new.*` and `n1..n3.*`.
+  - **Close** (`.close`): "Walk it off", the price sentence and the badge again,
+    beside the **trading card** (`.tradingcard` / `.tc-*`): the app as a
+    gold-foil rookie card whose back-of-card stat line (∞ runs, 1× payment,
+    0 subs, iPhone and iPad) is the price story. The card leads, with a smaller
+    walk-off screen beside it. Its name plate is a `p.tc-title`, not a heading.
+    No tilt (it made the title render as a jagged staircase), just a hover lift.
+  - **Mast footer**: the wordmark large over the links; identical markup on all
+    four pages.
+  - **House rules** the page was linted to (Hallmark `sloplint.mjs`): no
+    eyebrows or kickers above headings, no tracked capitals, no middle-dot
+    strings or emoji icons in copy, about 80 words per screen, `:focus-visible`
+    on every control. Waivers are recorded in the stamp; the App Store badge's
+    pure black/white is a deliberate open finding (Apple's badge spec).
 - **App Store button** (`.btn-appstore`): black official-style badge with an
   inline Apple-logo SVG (self-contained, no external image), linking to the App
-  Store URL above. Carries `data-umami-event="download-appstore"`.
+  Store URL above. It appears twice on the home page (hero and close); both
+  carry `data-umami-event="download-appstore"`.
 - **Self-contained and cheap.** The only first-party script is local
   (`js/i18n.js`); there is no CDN JS beyond the two allowed external
   dependencies: Google Fonts via `<link>` (including the Noto Sans JP/KR faces
