@@ -498,7 +498,7 @@ section { padding: 56px 0; }
 .shot:first-child { scroll-snap-align: start; margin-inline-start: auto; }
 .shot:last-child { margin-inline-end: auto; }
 
-/* --- What's New band (v1.1): the run log, the board, sharing, achievements.
+/* --- What's New band (v1.2): Daily Run, Run Rules, Game Center, packs.
    Deliberately NOT a base-path zig-zag — that list is the evergreen "how it
    plays" pitch and stays at six. This is a dated band that can be retired or
    re-pointed at the next release without touching it. --- */
